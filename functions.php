@@ -24,7 +24,7 @@ add_action( 'wp_enqueue_scripts', 'gwdchildtheme_scripts' );
 
 // ADD THE MENU SYSTEM
 
-  function register_my_menus() {
+  function register_gwdchild_menus() {
     register_nav_menus(
       array(
         'header-menu' => __( 'Header Menu' ),
@@ -33,7 +33,7 @@ add_action( 'wp_enqueue_scripts', 'gwdchildtheme_scripts' );
       )
     );
   }
-add_action( 'init', 'register_my_menus' ); 
+add_action( 'init', 'register_gwdchild_menus' ); 
 
 
 // Add GOOGLE Fonts
