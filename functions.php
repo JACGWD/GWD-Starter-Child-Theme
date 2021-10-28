@@ -1,18 +1,16 @@
 <?php
-// Add this to all your php files for added security
-
+// ADD THIS TO ALL YOUR PHP FILES FOR ADDED SECURITY
 if (!defined('ABSPATH'))
-	exit; // Exit if accessed directly.
+	exit; // EXIT IF ACCESSED DIRECTLY.
 
 
 
-// Proper way to enqueue (add) scripts and styles.
-
+// PROPER WAY TO ENQUEUE (ADD) SCRIPTS AND STYLES.
 function gwdchildtheme_scripts() {
     wp_enqueue_style( 'style-name', get_stylesheet_uri() );
 
  
-    // If you have javascripts, uncomment the line below (remove the //)
+    // IF YOU HAVE JAVASCRIPTS, UNCOMMENT THE LINE BELOW (REMOVE THE //)
 
     // wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/combined-scripts.js', array(), '1.0.0', true );
 }
@@ -20,10 +18,21 @@ add_action( 'wp_enqueue_scripts', 'gwdchildtheme_scripts' );
 
 
 
+// * INCLUDE GOOGLE FONTS: PRECONNECT  */
+function gwd_starter_theme_googleFontsPreconnect(){
+	echo '<link rel="preconnect" href="https://fonts.gstatic.com" />';
+}
+add_action('wp_head', 'gwd_starter_theme_googleFontsPreconnect', 10);
+
+/* INCLUDE GOOGLE FONTS: THE FONT ITSELF  */
+function gwd_starter_theme_googleFonts(){
+	wp_enqueue_style( 'google-fonts-lato', 'https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"' );
+}
+add_action('wp_enqueue_scripts', 'gwd_starter_theme_googleFonts', 11);
+
 
 
 // ADD THE MENU SYSTEM
-
   function register_gwdchild_menus() {
     register_nav_menus(
       array(
@@ -36,32 +45,8 @@ add_action( 'wp_enqueue_scripts', 'gwdchildtheme_scripts' );
 add_action( 'init', 'register_gwdchild_menus' ); 
 
 
-// Add GOOGLE Fonts
-
-// 1. Include Google Fonts: Add the Preconnect tag
-
-function gwdchild_googleFontsPreconnect(){
-	echo '<link rel="preconnect" href="https://fonts.gstatic.com" />';
-}
-add_action('wp_head', 'gwdchild_googleFontsPreconnect', 10);
-
-// 2. Include the Google Font itself
-
-function  gwdchild_googleFonts(){
-    // Change lato on the line below to the name of your chosen font (just to make the function parameter name unique)
-    // Paste the URL from Google Fonts after the comma on the line below
-	wp_enqueue_style( 'google-fonts-lato', 'https://fonts.googleapis.com/css2?family=Lato&display=swap' );
-}
-add_action('wp_enqueue_scripts', 'gwdchild_googleFonts', 11);
-
-
-
-
-
 
 // YOU CAN ADD ADDITIONAL WORDPRESS FEATURES TO THE SITE
-
-
 function gwdchildtheme_init(){
 
     // See: https://developer.wordpress.org/reference%2Ffunctions%2Fadd_theme_support%2F/
