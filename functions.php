@@ -36,9 +36,9 @@ add_action('wp_enqueue_scripts', 'gwd_starter_theme_googleFonts', 11);
   function register_gwdchild_menus() {
     register_nav_menus(
       array(
-        'header-menu' => __( 'Header Menu' ),
-        'footer-menu' => __( 'Footer Menu' ),
-        'social-menu' => __( 'Social Menu' ),
+        // 'header-menu' => __( 'Header Menu' ),  
+        // ADD A MENU USING THE ABOVE AS AN EXAMPLE. 
+        // DO NOT USE "header-menu", "footer-menu" AND "social-menu" AS THEY ALREADY EXIST IN THE PARENT THEME.
       )
     );
   }
