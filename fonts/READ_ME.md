@@ -45,7 +45,7 @@ Please supply at least two different formats (ex: woff2 and truetype) to maximiz
 You will need to write a new @font-face rule for every different font style. For example: one for regular, one for bold and another for italic.
 
 ## Font conversion sites
-If you have only one font format (like TrueType), you can use an online font conversion service like https://cloudconvert.com/ttf-to-woff2 
+If you have only one font format (like TrueType), you can use an online font conversion service like https://transfonter.org/ (recommended) or https://cloudconvert.com/ttf-to-woff2 
 Please search for them online. There are many different sites that offer conversion.
 
 ## Using Google Fonts
