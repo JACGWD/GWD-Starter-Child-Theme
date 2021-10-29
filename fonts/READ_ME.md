@@ -6,13 +6,38 @@ As often as possible, use the @font-face rule to use local fonts. You can find i
 
 Please make sure to use the LOCAL attribute first, so that the font doesn't get downloaded if it is already installed on the system. See below.
 
-    @font-face {
-    font-family: "My Font";
-    src: local("My Font Bold"),
-         url(fonts/myfont/MyFontBold.woff2);
-         url(fonts/myfont/MyFontBold.ttf);
-    font-weight: bold;
-    }
+            @font-face {
+        font-family: 'Titillium Web';
+        src: local('Titillium Web Black'), local('TitilliumWeb-Black'),
+            url('fonts/TitilliumWeb-Black.woff2') format('woff2'),
+            url('fonts/TitilliumWeb-Black.woff') format('woff'),
+            url('fonts/TitilliumWeb-Black.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+        }
+
+        @font-face {
+        font-family: 'Titillium Web';
+        src: local('Titillium Web Bold Italic'), local('TitilliumWeb-BoldItalic'),
+            url('fonts/TitilliumWeb-BoldItalic.woff2') format('woff2'),
+            url('fonts/TitilliumWeb-BoldItalic.woff') format('woff'),
+            url('fonts/TitilliumWeb-BoldItalic.ttf') format('truetype');
+        font-weight: bold;
+        font-style: italic;
+        font-display: swap;
+        }
+
+        @font-face {
+        font-family: 'Titillium Web';
+        src: local('Titillium Web ExtraLight'), local('TitilliumWeb-ExtraLight'),
+            url('fonts/TitilliumWeb-ExtraLight.woff2') format('woff2'),
+            url('fonts/TitilliumWeb-ExtraLight.woff') format('woff'),
+            url('fonts/TitilliumWeb-ExtraLight.ttf') format('truetype');
+        font-weight: 200;
+        font-style: normal;
+        font-display: swap;
+        }
 
 Please supply at least two different formats (ex: woff2 and truetype) to maximize font compatibility.
 
