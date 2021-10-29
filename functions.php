@@ -3,7 +3,16 @@
 if (!defined('ABSPATH'))
 	exit; // EXIT IF ACCESSED DIRECTLY.
 
+/*
 
+* 1. Stylesheet enqueue function
+* 2. Uncomment line 24 to use the js/combined-scripts.js file
+* 3. Uncomment lines 31-40 to use Google fonts (change URL to your font on line 36)
+* 4. Uncomment lines 45-54 to add a menu of your own.
+* 5. You can add custom Wordpress features in the section between lines 60-64
+
+
+*/
 
 // PROPER WAY TO ENQUEUE (ADD) SCRIPTS AND STYLES.
 function gwdchildtheme_scripts() {
@@ -19,16 +28,16 @@ add_action( 'wp_enqueue_scripts', 'gwdchildtheme_scripts' );
 
 
 // * INCLUDE GOOGLE FONTS: PRECONNECT  */
-function gwd_starter_child_theme_googleFontsPreconnect(){
-	echo '<link rel="preconnect" href="https://fonts.gstatic.com" />';
-}
-add_action('wp_head', 'gwd_starter_child_theme_googleFontsPreconnect', 10);
+// function gwd_starter_child_theme_googleFontsPreconnect(){
+// 	echo '<link rel="preconnect" href="https://fonts.gstatic.com" />';
+// }
+// add_action('wp_head', 'gwd_starter_child_theme_googleFontsPreconnect', 10);
 
-/* INCLUDE GOOGLE FONTS: THE FONT ITSELF  */
-function gwd_starter_child_theme_googleFonts(){
-	wp_enqueue_style( 'google-fonts-lato', 'https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"' );
-}
-add_action('wp_enqueue_scripts', 'gwd_starter_child_theme_googleFonts', 11);
+// /* INCLUDE GOOGLE FONTS: THE FONT ITSELF  */
+// function gwd_starter_child_theme_googleFonts(){
+// 	wp_enqueue_style( 'google-fonts-lato', 'https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"' );
+// }
+// add_action('wp_enqueue_scripts', 'gwd_starter_child_theme_googleFonts', 11);
 
 
 
