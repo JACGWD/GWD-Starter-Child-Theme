@@ -26,7 +26,7 @@ function gwdchildtheme_scripts() {
 
 // IF YOU HAVE JAVASCRIPTS, UNCOMMENT THE LINE BELOW (REMOVE THE //)
 
-// wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/combined-scripts.js', array(), '1.0.0', true );
+// wp_enqueue_script( 'script-name', get_stylesheet_uri() . '/js/combined-scripts.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'gwdchildtheme_scripts' );
 
